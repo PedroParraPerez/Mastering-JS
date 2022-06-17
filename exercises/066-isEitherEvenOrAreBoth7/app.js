@@ -1,3 +1,9 @@
 function isEitherEvenOrAreBoth7(num1, num2) {
     // your code here
+    if ((num1 % 2 === 0 || num2 % 2 == 0) || (num1 == 7 && num2 == 7)) {
+        console.log("hola")
+        return true
+    }
+    return false
 }
+isEitherEvenOrAreBoth7(4, 4)

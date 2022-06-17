@@ -17,7 +17,11 @@ test('The function must add the properties of the 2nd object to the first one. '
     }
     extend(obj1, obj2)
     var output = obj1
-    expect(output).toEqual({ a: 1, b: 2, c: 3 })
+    expect(output).toEqual({
+        a: 1,
+        b: 2,
+        c: 3
+    })
 })
 
 test('If the first object already has the given key, ignore it(don\'t override the property value).', () => {
@@ -28,9 +32,19 @@ test('If the first object already has the given key, ignore it(don\'t override t
     }
     var obj2 = {
         b: 2227,
-        c: 91
+        c: 91,
+        d: 23,
+        klaskda: "lksdfnlsdfls",
+        lkdffkldfkdf: false
     }
     extend(obj1, obj2)
     var output = obj1
-    expect(output).toEqual({ a: 74, b: 22, c: 91 })
+    expect(output).toEqual({
+        a: 74,
+        b: 22,
+        c: 91,
+        d: 23,
+        klaskda: "lksdfnlsdfls",
+        lkdffkldfkdf: false
+    })
 })

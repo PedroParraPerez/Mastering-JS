@@ -1,4 +1,5 @@
 function getLastElement(array) {
-  // your code here
-  return 4
+    // your code here
+
+    return array[array.length - 1]
 }

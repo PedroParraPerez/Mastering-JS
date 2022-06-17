@@ -8,5 +8,14 @@ var obj2 = {
 };
 
 function extend(obj1, obj2) {
-    // your code here
+    for (value in obj2) {
+
+        if (obj1.hasOwnProperty(value) == false) {
+            obj1[value] = obj2[value]
+        }
+
+    }
+    return obj1
 }
+
+extend(obj1, obj2)

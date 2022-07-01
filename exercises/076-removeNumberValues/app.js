@@ -3,8 +3,15 @@ var obj = {
     b: 'remaining',
     c: 4
 };
+
 function removeNumberValues(obj) {
     // your code here
+    for (value in obj) {
+        if (typeof obj[value] === "number") {
+            delete obj[value]
+        }
+    }
+
 }
 
 removeNumberValues(obj);
